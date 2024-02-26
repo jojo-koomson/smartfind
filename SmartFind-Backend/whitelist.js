@@ -6,7 +6,8 @@ const whitelist = [
     'http://localhost:3500',
     'http://localhost:5173',
     'http://localhost:5174',
-    'https://maps.googleapis.com/maps/api/mapsjs/',
+    'https://smartfind-front.vercel.app',
+    'https://maps.googleapis.com/maps/api/mapsjs',
     'http://10.247.5.180:85',
     'file://*',
     'https://*' 
