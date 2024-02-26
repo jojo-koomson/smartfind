@@ -17,7 +17,7 @@ const MapComponent = ({ coordinates }: { coordinates: { lat: number; lng: number
 
   const fetchData = async () => {
     try {
-      const response = await fetch('https://smartfullapp-server2.vercel.app/api/data');
+      const response = await fetch('https://smartfind-server.vercel.app/api/data');
       const data = await response.json();
       // console.log(data);
       setApiKey(data.apiKey);

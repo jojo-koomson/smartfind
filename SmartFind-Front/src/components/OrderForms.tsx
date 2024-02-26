@@ -31,7 +31,7 @@ const OrderForms: React.FC<OrderFormsProps> = ({ initialCoordinates }) => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('https://smartfullapp-server2.vercel.app/api/data');
+      const response = await fetch('https://smartfind-server.vercel.app/api/data');
       const data = await response.json();
       setApiKey(data.apiKey);
     } catch (error) {
@@ -116,7 +116,7 @@ const OrderForms: React.FC<OrderFormsProps> = ({ initialCoordinates }) => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     try {
-      const response = await fetch('https://smartfullapp-server2.vercel.app/submitForm', {
+      const response = await fetch('https://smartfind-server.vercel.app/submitForm', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
