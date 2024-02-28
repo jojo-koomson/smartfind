@@ -14,7 +14,7 @@ const MapSearch: React.FC = () => {
   
   const fetchData = async () => {
     try {
-      const response = await fetch('https://smartfind-server2.vercel.app/api/data');
+      const response = await fetch('http://10.247.5.180:3005/api/data');
       const data = await response.json();
       setApiKey(data.apiKey);
     } catch (error) {
@@ -48,7 +48,7 @@ const MapSearch: React.FC = () => {
   };
 
   const checkConnectivity = async (lat: number, lng: number) => {
-    const postResponse = await axios.post('https://smartfind-server2.vercel.app/checkConnectivity', {
+    const postResponse = await axios.post('http://10.247.5.180:3005/checkConnectivity', {
       clientlatitude: lat,
       clientlongitude: lng,
     });

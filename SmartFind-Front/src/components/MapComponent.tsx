@@ -13,11 +13,10 @@ const MapComponent = ({ coordinates }: { coordinates: { lat: number; lng: number
   const [mapId, setmapId] = useState('');
   const [mapLoaded, setMapLoaded] = useState(false);
 
- 
 
   const fetchData = async () => {
     try {
-      const response = await fetch('https://smartfind-server2.vercel.app/api/data');
+      const response = await fetch('http://10.247.5.180:3005/api/data');
       const data = await response.json();
       // console.log(data);
       setApiKey(data.apiKey);
