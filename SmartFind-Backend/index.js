@@ -99,7 +99,7 @@ const transporter = nodemailer.createTransport({
         // Configure mail options
         const mailOptions = {
           from: `${formData.email}`,
-          to: ['daniel.jojo-koomson@outlook.com,', 'christian.abbosey@smartinfraco.com', 'd.koomson@smartinfraco.com'],
+          to: ['daniel.jojo-koomson@outlook.com,','fieldsupport@smartinfraco.com', 'christian.abbosey@smartinfraco.com', 'd.koomson@smartinfraco.com'],
           subject: 'Network Service Request',
           text: `
             Full Name: ${formData.fullName}
