@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FaLocationPin } from 'react-icons/fa6';
 import MapComponent from './MapComponent';
-  
 const MapSearch: React.FC = () => {
   const [apiKey, setApiKey] = useState('');
   const [searchQuery, setSearchQuery] = useState<string>('');
