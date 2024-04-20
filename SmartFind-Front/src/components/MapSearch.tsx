@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FaLocationPin } from 'react-icons/fa6';
 import MapComponent from './MapComponent';
-
 const MapSearch: React.FC = () => {
   const [apiKey, setApiKey] = useState('');
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -14,7 +13,7 @@ const MapSearch: React.FC = () => {
   
   const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:3005/api/data');
+      const response = await fetch('https://smartfind-server2.vercel.app/api/data');
       const data = await response.json();
       setApiKey(data.apiKey);
     } catch (error) {
@@ -48,7 +47,7 @@ const MapSearch: React.FC = () => {
   };
 
   const checkConnectivity = async (lat: number, lng: number) => {
-    const postResponse = await axios.post('http://localhost:3005/checkConnectivity', {
+    const postResponse = await axios.post('https://smartfind-server2.vercel.app/checkConnectivity', {
       clientlatitude: lat,
       clientlongitude: lng,
     });
