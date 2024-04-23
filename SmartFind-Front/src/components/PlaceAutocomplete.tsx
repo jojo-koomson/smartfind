@@ -28,7 +28,7 @@ const PlaceAutocomplete = ({ onSelect }) => {
   }, []);
 
   useEffect(() => {
-    if (isLoaded && apiKey) { // Check if both Google Maps and API key are loaded
+    if (isLoaded && apiKey) { 
       initializePlacesAutocomplete();
     }
   }, [isLoaded, apiKey]);
